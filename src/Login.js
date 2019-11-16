@@ -5,10 +5,10 @@ import firebaseConfig from './firebaseConfig'
 import { AuthContext } from './Auth'
 
 const Login = ({ history }) => {
-  const handleLogin = useCallback(async () => {
+  const handleGoogleLogin = useCallback(async () => {
     try {
       const provider = new firebase.auth.GoogleAuthProvider()
-      await firebaseConfig.auth().signInWithPopup(provider)
+      await firebaseConfig.auth().signInWithRedirect(provider)
       history.push('/')
     } catch (error) {
       alert(error)
@@ -24,7 +24,7 @@ const Login = ({ history }) => {
   return (
     <Fragment>
       <h1>Log in</h1>
-      <button onClick={handleLogin}>Log in with Google</button>
+      <button onClick={handleGoogleLogin}>Log in with Google</button>
     </Fragment>
   )
 }
