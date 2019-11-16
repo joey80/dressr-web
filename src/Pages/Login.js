@@ -1,8 +1,8 @@
 import React, { Fragment, useCallback, useContext } from 'react'
 import { withRouter, Redirect } from 'react-router'
 import * as firebase from 'firebase/app'
-import firebaseConfig from './firebaseConfig'
-import { AuthContext } from './Auth'
+import firebaseConfig from '../firebaseConfig'
+import { AuthContext } from '../Auth'
 
 const Login = ({ history }) => {
   const handleGoogleLogin = useCallback(async () => {

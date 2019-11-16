@@ -2,10 +2,9 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import PrivateRoute from './PrivateRoute'
 import AuthContextProvider from './Auth'
-import Home from './Home'
-import Login from './Login'
-import SignUp from './Signup'
-import './App.css'
+import Home from './Pages/Home'
+import Login from './Pages/Login'
+import SignUp from './Pages/Signup'
 
 const App = () => (
   <AuthContextProvider>
